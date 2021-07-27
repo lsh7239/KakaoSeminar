@@ -282,6 +282,7 @@ exports.extract = function (cwd, opts) {
       ws.on('error', function (err) { // always forward errors on destroy
         rs.destroy(err)
       })
+      
 
       pump(rs, ws, function (err) {
         if (err) return next(err)
